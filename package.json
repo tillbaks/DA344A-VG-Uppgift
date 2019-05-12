@@ -1,0 +1,32 @@
+{
+  "name": "da344a-vg-uppgift",
+  "version": "1.0.0",
+  "description": "A website that gives you random facts about cats, dogs and horses. With nice transition animations\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dsimple responsive website that shows random facts about cats, dogs and horses. Also has nice animations using anime.js.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tillbaks/DA344A-VG-Uppgift.git"
+  },
+  "keywords": [
+    "website",
+    "cat",
+    "dog",
+    "horse",
+    "facts"
+  ],
+  "author": "Johannes Blüml",
+  "license": "SEE LICENSE IN LICENCE",
+  "bugs": {
+    "url": "https://github.com/tillbaks/DA344A-VG-Uppgift/issues"
+  },
+  "homepage": "https://github.com/tillbaks/DA344A-VG-Uppgift#readme",
+  "dependencies": {
+    "animejs": "^3.0.1",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@pmoo/testy": "^4.0.0"
+  }
+}
