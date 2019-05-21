@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Facts</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather%7CKaushan+Script%7CLobster" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="layout.css" type="text/css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Animal Facts</h1>
+    </header>
+
+    <main>
+      <article class="hidden fact error">Oh no. Looks like something went wrong while loading the fact.</article>
+
+      <article class="hidden fact">The Maine Coon cat is America's only natural breed of domestic feline. It is 4 to 5 times
+        larger than the
+        Singapura, the smallest breed of cat.</article>
+
+      <article class="loading">
+        <img src="loading.svg" alt="Loading next fact.." />
+        <p>Loading next fact..</p>
+      </article>
+
+      <nav>
+        <nav class="animal-type-chooser">
+          <a href="#" class="active button">Cat</a> |
+          <a href="#" class="button">Dog</a> |
+          <a href="#" class="button">Horse</a>
+        </nav>
+        <nav class="next-fact">
+          <a href="#" class="button">Next Fact</a>
+        </nav>
+      </nav>
+    </main>
+
+    <footer>
+      <span>Created by Johannes Blüml (ah7948)</span>
+    </footer>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

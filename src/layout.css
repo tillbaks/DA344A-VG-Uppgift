@@ -1,0 +1,118 @@
+/** BODY **/
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: 'Merriweather', serif;
+  background-color:darkslategray;
+  
+  color: darkslategray;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.hidden {
+  display: none;
+}
+@keyframes spin360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color:beige;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+/** HEADER **/
+
+header {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1.2rem;
+  background: darkslategray;
+  color: beige;
+}
+
+/** MAIN **/
+main {
+  align-self: center;
+  text-align: center;
+}
+main > .fact {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 1.5rem;
+}
+main > .fact.error {
+  color: brown;
+}
+main > nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: .5rem;
+  margin: .5rem 0;
+}
+main > nav > nav.animal-type-chooser {
+  justify-self: start;
+  background: darkslategray;
+  color: beige;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+main > nav > nav.animal-type-chooser > a.button {
+  text-decoration: none;
+  color: beige;
+}
+main > nav > nav.animal-type-chooser > a.active.button,
+main > nav > nav.animal-type-chooser > a.button:hover {
+  color: darkgoldenrod;
+}
+main > nav > nav.animal-type-chooser > a.active.button:hover {
+  color: beige;
+}
+main > nav > nav.next-fact {
+  justify-self: end;
+  background: darkslategray;
+  padding: 1rem;
+  padding-right: 1.5rem;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+main > nav > nav.next-fact > a.button {
+  text-decoration: none;
+  color: beige;
+}
+main > nav > nav.next-fact > a.button:hover {
+  color: darkgoldenrod;
+}
+main > .loading > p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+main > .loading > img {
+  width: 50vw;
+  height: 50vw;
+  animation: spin360 1250ms linear infinite;
+}
+
+path {
+  fill: aliceblue;
+}
+
+/** FOOTER **/
+footer {
+  background: darkslategray;
+  color: beige;
+  font-size: .8rem;
+  text-align: center;
+  padding: 1.2rem;
+}
