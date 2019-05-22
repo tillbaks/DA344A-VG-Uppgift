@@ -1,5 +1,4 @@
-function CatFactsApi(localStorageName = 'catFactsApi.animalTypes', factsToRetrieve = 10) {
-
+function CatFactsApi (localStorageName = 'catFactsApi.animalTypes', factsToRetrieve = 10) {
   // API needs proxy since cat-fact api does not allow CORS
   const api = 'https://cors-anywhere.herokuapp.com/https://cat-fact.herokuapp.com'
   let availableFacts = []
@@ -11,7 +10,7 @@ function CatFactsApi(localStorageName = 'catFactsApi.animalTypes', factsToRetrie
   /**
    * Updates the facts stored in memory to reduce http requests
    */
-  async function updateFacts() {
+  async function updateFacts () {
     const result = await axios.get(`${api}/facts/random`, {
       params: {
         amount: factsToRetrieve,
@@ -22,14 +21,14 @@ function CatFactsApi(localStorageName = 'catFactsApi.animalTypes', factsToRetrie
     result.data.forEach(fact => availableFacts.push(fact))
   }
 
-  function clearFacts() {
+  function clearFacts () {
     availableFacts = []
   }
 
   /**
    * @returns {string} Comma separated list of selected animal types, if all are unselected all will be returned so you will never get an empty string
    */
-  function getAnimalTypesCommaSeparated() {
+  function getAnimalTypesCommaSeparated () {
     let types = Object.entries(animalTypes)
       .filter(([key, value]) => value)
       .join(',')
@@ -43,11 +42,11 @@ function CatFactsApi(localStorageName = 'catFactsApi.animalTypes', factsToRetrie
 
   /**
    * Retrieves a random fact
-   * 
+   *
    * @returns {Object} A fact object
    */
-  async function getRandomFact() {
-    if (availableFacts == 0) {
+  async function getRandomFact () {
+    if (availableFacts.length === 0) {
       await updateFacts()
     }
 
@@ -56,13 +55,13 @@ function CatFactsApi(localStorageName = 'catFactsApi.animalTypes', factsToRetrie
 
   /**
    * Select which animal types are wanted when retrieving random facts
-   * 
+   *
    * @param {Object}  object          Object containing animal types
    * @param {boolean} object.cat      Facts about cats
    * @param {boolean} object.dog      Facts about dogs
    * @param {boolean} object.horse    Facts about horses
    */
-  function setAnimalTypes({ cat, dog, horse }) {
+  function setAnimalTypes ({ cat, dog, horse }) {
     // Clear so new animal types are honored when retrieving facts
     clearFacts()
 
@@ -79,7 +78,7 @@ function CatFactsApi(localStorageName = 'catFactsApi.animalTypes', factsToRetrie
     window.localStorage.setItem(localStorageName, JSON.stringify(animalTypes))
   }
 
-  function getAnimalTypes() {
+  function getAnimalTypes () {
     return animalTypes
   }
 

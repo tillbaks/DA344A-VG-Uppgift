@@ -45,13 +45,20 @@ main {
   align-self: center;
   text-align: center;
 }
+main > .loading,
+main > .error,
 main > .fact {
   font-size: 2rem;
   line-height: 2.5rem;
   padding: 1.5rem;
 }
-main > .fact.error {
+main > .error {
   color: brown;
+}
+main > .loading > img {
+  width: 50vw;
+  height: 50vw;
+  animation: spin360 1250ms linear infinite;
 }
 main > nav {
   display: grid;
@@ -93,15 +100,6 @@ main > nav > nav.next-fact > a.button {
 }
 main > nav > nav.next-fact > a.button:hover {
   color: darkgoldenrod;
-}
-main > .loading > p {
-  font-size: 1.2rem;
-  text-align: center;
-}
-main > .loading > img {
-  width: 50vw;
-  height: 50vw;
-  animation: spin360 1250ms linear infinite;
 }
 
 path {
