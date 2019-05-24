@@ -33,7 +33,10 @@ function CatFactsApi (localStorageName = 'catFactsApi.animalTypes', factsToRetri
    */
   function getAnimalTypesCommaSeparated () {
     let types = Object.entries(animalTypes)
-      .filter(([key, value]) => value)
+      .reduce((acc, [key, value]) => { 
+        if (value)  acc.push(key)
+        return acc
+      }, [])
       .join(',')
 
     if (types === '') {
