@@ -1,3 +1,6 @@
+import axios from 'axios'
+export default CatFactsApi
+
 function CatFactsApi (localStorageName = 'catFactsApi.animalTypes', factsToRetrieve = 10) {
   // API needs proxy since cat-fact api does not allow CORS
   const api = 'https://cors-anywhere.herokuapp.com/https://cat-fact.herokuapp.com'
