@@ -44,6 +44,7 @@ header {
 main {
   align-self: center;
   text-align: center;
+  overflow: hidden;
 }
 main > .loading,
 main > .error,
@@ -113,4 +114,9 @@ footer {
   font-size: .8rem;
   text-align: center;
   padding: 1.2rem;
+}
+
+
+.letter {
+  display: inline-block;
 }

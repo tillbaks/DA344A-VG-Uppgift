@@ -1,4 +1,4 @@
-import anime from 'animejs'
+import Animations from './Animations.js'
 import CatFactsApi from './CatFactsApi.js'
 
 // Constants
@@ -27,6 +27,7 @@ async function loadNextFact () {
     const fact = await catFactApi.getRandomFact()
     elFact.innerHTML = fact.text
     showView(elFact)
+    Animations().randomText('article.fact')
   } catch (error) {
     console.error(error)
     showView(elError)
