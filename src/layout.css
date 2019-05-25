@@ -11,8 +11,8 @@ body {
   font-weight: bold;
   font-size: 1rem;
 }
-.hidden {
-  display: none;
+.letter {
+  display: inline-block;
 }
 @keyframes spin360 {
   100% {
@@ -28,6 +28,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
+  overflow: hidden;
 }
 
 /** HEADER **/
@@ -44,20 +45,24 @@ header {
 main {
   align-self: center;
   text-align: center;
+  overflow: hidden;
+  display: grid;
 }
 main > .loading,
 main > .error,
 main > .fact {
+  grid-area: 1 / 1;
   font-size: 2rem;
   line-height: 2.5rem;
   padding: 1.5rem;
+  opacity: 0;
 }
 main > .error {
   color: brown;
 }
 main > .loading > img {
-  width: 50vw;
-  height: 50vw;
+  width: 25vh;
+  height: 25vh;
   animation: spin360 1250ms linear infinite;
 }
 main > nav {
@@ -93,6 +98,7 @@ main > nav > nav.next-fact {
   padding-right: 1.5rem;
   border-top-left-radius: .5rem;
   border-bottom-left-radius: .5rem;
+  opacity: 0;
 }
 main > nav > nav.next-fact > a.button {
   text-decoration: none;
@@ -100,10 +106,6 @@ main > nav > nav.next-fact > a.button {
 }
 main > nav > nav.next-fact > a.button:hover {
   color: darkgoldenrod;
-}
-
-path {
-  fill: aliceblue;
 }
 
 /** FOOTER **/
