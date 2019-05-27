@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Facts</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather%7CKaushan+Script%7CLobster" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="layout.css" type="text/css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Animal Facts</h1>
+    </header>
+
+    <main>
+      <article class="fact"></article>
+      <article class="error">Oh no. Looks like something went wrong while loading the fact.</article>
+
+      <nav>
+        <nav class="animal-type-chooser">
+          <span class="button cat">Cat</span> |
+          <span class="button dog">Dog</span> |
+          <span class="button horse">Horse</span>
+        </nav>
+        <nav class="next-fact">
+          <svg class="loading icon" version="1.1" viewBox="0 0 24 24">
+            <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
+          </svg>
+          Next Fact
+        </nav>
+      </nav>
+    </main>
+
+    <footer>
+      <span>Created by Johannes Blüml (ah7948)</span>
+    </footer>
+
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+
+</html>

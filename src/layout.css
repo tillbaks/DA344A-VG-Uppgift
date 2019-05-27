@@ -1,0 +1,127 @@
+/** BODY **/
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: 'Merriweather', serif;
+  background-color:darkslategray;
+  
+  color: darkslategray;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.letter {
+  display: inline-block;
+}
+@keyframes spin360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color:beige;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+
+/** HEADER **/
+
+header {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1.2rem;
+  background: darkslategray;
+  color: beige;
+}
+
+/** MAIN **/
+main {
+  text-align: center;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+main > article {
+  grid-area: 1 / 1;
+  align-self: center;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 1.5rem;
+  opacity: 0;
+}
+main > article.error {
+  color: brown;
+}
+@media only screen and (max-width: 480px) {
+  /* Smaller fontsize in mobile layout */
+  main > article {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+main > nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: .5rem;
+  margin: 0 0 1.5rem;
+}
+main > nav > nav.animal-type-chooser {
+  justify-self: start;
+  background: darkslategray;
+  color: beige;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+main > nav > nav.animal-type-chooser > .button {
+  color: beige;
+}
+main > nav > nav.animal-type-chooser > .active.button,
+main > nav > nav.animal-type-chooser > .button:hover {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+main > nav > nav.animal-type-chooser > .active.button:hover {
+  color: beige;
+  cursor: pointer;
+}
+main > nav > nav.next-fact {
+  justify-self: end;
+  background: darkslategray;
+  padding: 1rem;
+  padding-right: 1.5rem;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+main > nav > nav.next-fact > svg.loading.icon {
+  display: none;
+  fill: beige;
+  height: .8rem;
+  width: .8rem;
+  margin-right: .5rem;
+  animation: spin360 1250ms linear infinite;
+}
+main > nav > nav.next-fact {
+  color: beige;
+}
+main > nav > nav.next-fact:hover {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+/** FOOTER **/
+footer {
+  background: darkslategray;
+  color: beige;
+  font-size: .8rem;
+  text-align: center;
+  padding: 1.2rem;
+}

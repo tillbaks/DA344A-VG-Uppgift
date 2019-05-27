@@ -1,0 +1,34 @@
+{
+  "name": "da344a-vg-uppgift",
+  "version": "1.0.0",
+  "description": "A simple responsive website that shows random facts about cats, dogs and horses. Also uses anime.js for nice animations.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tillbaks/DA344A-VG-Uppgift.git"
+  },
+  "keywords": [
+    "website",
+    "cat",
+    "dog",
+    "horse",
+    "facts"
+  ],
+  "author": "Johannes Blüml",
+  "license": "SEE LICENSE IN LICENCE",
+  "bugs": {
+    "url": "https://github.com/tillbaks/DA344A-VG-Uppgift/issues"
+  },
+  "homepage": "https://github.com/tillbaks/DA344A-VG-Uppgift#readme",
+  "dependencies": {
+    "animejs": "^3.0.1",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
