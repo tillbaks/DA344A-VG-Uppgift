@@ -43,24 +43,23 @@ header {
 
 /** MAIN **/
 main {
-  align-self: center;
   text-align: center;
   overflow: hidden;
   display: grid;
+  grid-template-rows: 1fr auto;
 }
-main > .loading,
-main > .error,
-main > .fact {
+main > article {
   grid-area: 1 / 1;
+  align-self: center;
   font-size: 2rem;
   line-height: 2.5rem;
   padding: 1.5rem;
   opacity: 0;
 }
-main > .error {
+main > article.error {
   color: brown;
 }
-main > .loading > img {
+main > article.loading > img {
   width: 25vh;
   height: 25vh;
   animation: spin360 1250ms linear infinite;
@@ -69,7 +68,7 @@ main > nav {
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: .5rem;
-  margin: .5rem 0;
+  margin: 0 0 1.5rem;
 }
 main > nav > nav.animal-type-chooser {
   justify-self: start;
