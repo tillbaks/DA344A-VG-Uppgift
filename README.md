@@ -16,6 +16,9 @@ These tools are used to accomplish this project.
 
 ## How to run it
 1. Clone the github repository
+```
+git clone https://github.com/tillbaks/DA344A-VG-Uppgift.git
+```
 2. `(Optional)` Change the CORS proxy. Since the cat-facts-api I am using in this project does not allow Cross-Origin Resource Sharing I have decided to use a proxy. Setting up your own proxy is recommended. To change the proxy change the `api variable` in `src/CatFactsApi.js`
 3. Install build requirements:
 ```
