@@ -1,11 +1,18 @@
 # Animal Facts
 
 ## Why and what
-This is a website that retrieves facts about various animals from an API and displays them with smooth typing animations. This is created as an excercise in the course `DA344A - Web Applications for Mobile Devices` at Malmö University.
+This is a responsive website that retrieves facts about various animals from an API and displays them with smooth typing animations. This is created as an excercise in the course `DA344A - Web Applications for Mobile Devices` at Malmö University.
 
 Demo page is available here: http://dvwebb.mah.se/ah7948/uppgift-vg/
 
 ![GIF Demo of the website](example-demo.gif)
+
+## Tools
+These tools are used to accomplish this project.
+
+* Javascript is compiled using [Webpack](https://github.com/webpack/webpack)
+* Animations are done with [animejs](https://github.com/juliangarnier/anime/)
+* Ajax requests are done with [axios](https://github.com/axios/axios)
 
 ## How to run it
 1. Clone the github repository
