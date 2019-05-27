@@ -59,11 +59,6 @@ main > article {
 main > article.error {
   color: brown;
 }
-main > article.loading > img {
-  width: 25vh;
-  height: 25vh;
-  animation: spin360 1250ms linear infinite;
-}
 main > nav {
   display: grid;
   grid-template-columns: auto auto;
@@ -79,16 +74,17 @@ main > nav > nav.animal-type-chooser {
   border-top-right-radius: .5rem;
   border-bottom-right-radius: .5rem;
 }
-main > nav > nav.animal-type-chooser > a.button {
-  text-decoration: none;
+main > nav > nav.animal-type-chooser > .button {
   color: beige;
 }
-main > nav > nav.animal-type-chooser > a.active.button,
-main > nav > nav.animal-type-chooser > a.button:hover {
+main > nav > nav.animal-type-chooser > .active.button,
+main > nav > nav.animal-type-chooser > .button:hover {
   color: darkgoldenrod;
+  cursor: pointer;
 }
-main > nav > nav.animal-type-chooser > a.active.button:hover {
+main > nav > nav.animal-type-chooser > .active.button:hover {
   color: beige;
+  cursor: pointer;
 }
 main > nav > nav.next-fact {
   justify-self: end;
@@ -97,14 +93,21 @@ main > nav > nav.next-fact {
   padding-right: 1.5rem;
   border-top-left-radius: .5rem;
   border-bottom-left-radius: .5rem;
-  opacity: 0;
 }
-main > nav > nav.next-fact > a.button {
-  text-decoration: none;
+main > nav > nav.next-fact > svg.loading.icon {
+  display: none;
+  fill: beige;
+  height: .8rem;
+  width: .8rem;
+  margin-right: .5rem;
+  animation: spin360 1250ms linear infinite;
+}
+main > nav > nav.next-fact {
   color: beige;
 }
-main > nav > nav.next-fact > a.button:hover {
+main > nav > nav.next-fact:hover {
   color: darkgoldenrod;
+  cursor: pointer;
 }
 
 /** FOOTER **/

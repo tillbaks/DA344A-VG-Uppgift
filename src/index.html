@@ -22,19 +22,18 @@
     <main>
       <article class="fact"></article>
       <article class="error">Oh no. Looks like something went wrong while loading the fact.</article>
-      <article class="loading">
-        <img src="loading.svg" />
-        <p>Loading next fact..</p>
-      </article>
 
       <nav>
         <nav class="animal-type-chooser">
-          <a href="#" class="button cat">Cat</a> |
-          <a href="#" class="button dog">Dog</a> |
-          <a href="#" class="button horse">Horse</a>
+          <span class="button cat">Cat</span> |
+          <span class="button dog">Dog</span> |
+          <span class="button horse">Horse</span>
         </nav>
         <nav class="next-fact">
-          <a href="#" class="button">Next Fact</a>
+          <svg class="loading icon" version="1.1" viewBox="0 0 24 24">
+            <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
+          </svg>
+          Next Fact
         </nav>
       </nav>
     </main>

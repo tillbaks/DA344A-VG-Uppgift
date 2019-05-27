@@ -10,40 +10,40 @@ const elFact = document.querySelector('article.fact')
 const elButtonCat = document.querySelector('.button.cat')
 const elButtonDog = document.querySelector('.button.dog')
 const elButtonHorse = document.querySelector('.button.horse')
-const state = {
-  visibleView: '.no-view-selected.yet'
-}
+let visibleView = '.no-view-selected.yet'
 
 // Functions
 
-async function changeView (selector) {
-  await animate.fadeOut(state.visibleView)
-  if (selector === 'article.fact') {
-    document.querySelector(selector).style.opacity = 1
-    await animate.randomText(selector)
+function setLoading (enabled) {
+  if (enabled) {
+    document.querySelector('.icon.loading').style.display = 'inline'
   } else {
-    await animate.fadeIn(selector)
+    document.querySelector('.icon.loading').style.display = 'none'
   }
-  state.visibleView = selector
 }
 
-async function loadNextFact (initialLoad) {
-  if (!initialLoad) animate.slideOutRight('nav.next-fact')
-  await changeView('article.loading')
+async function loadNextFact () {
+  await animate.wobbleRight('nav.next-fact')
+  setLoading(true)
   try {
     const fact = await catFactApi.getRandomFact()
+    await animate.fadeOut(visibleView)
     elFact.innerHTML = fact.text
-    await changeView('article.fact')
+    visibleView = 'article.fact'
+    document.querySelector(visibleView).style.opacity = 1
+    await animate.randomText(visibleView)
   } catch (error) {
     console.error(error)
-    await changeView('article.error')
+    await animate.fadeOut(visibleView)
+    visibleView = 'article.error'
+    await animate.fadeIn(visibleView)
   } finally {
-    await animate.slideInRight('nav.next-fact')
+    setLoading(false)
   }
 }
 
 async function setAnimalType (type, element) {
-  await animate.wobbleLeft('nav.animal-type-chooser')
+  animate.wobbleLeft('nav.animal-type-chooser')
   const isSet = element.classList.contains('active')
   const result = {}
   result[type] = !isSet
@@ -69,9 +69,6 @@ if (initialAnimalTypes.cat) elButtonCat.classList.add('active')
 if (initialAnimalTypes.dog) elButtonDog.classList.add('active')
 if (initialAnimalTypes.horse) elButtonHorse.classList.add('active')
 
-
 // Navigation slides in from sides
 animate.slideInPage('header', 'footer', 'nav.animal-type-chooser', 'nav.next-fact')
-  .then(() => loadNextFact(true))
-
-window.changeView = (sel) => changeView(sel)
+  .then(() => loadNextFact())
