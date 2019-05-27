@@ -59,6 +59,13 @@ main > article {
 main > article.error {
   color: brown;
 }
+@media only screen and (max-width: 480px) {
+  /* Smaller fontsize in mobile layout */
+  main > article {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 main > nav {
   display: grid;
   grid-template-columns: auto auto;
